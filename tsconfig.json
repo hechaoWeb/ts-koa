@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "ES2016",
+    "lib": ["es2017"],
+    "sourceMap": false,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports":true,
+    "allowJs": true,
+    // "declaration": false,
+    // "sourceMap": true,
+    // "removeComments": true,
+    // "strict": true,
+    // "noImplicitAny": false,
+    // "esModuleInterop": true,
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": ["node_modules"]
+  // "include": ["ormconfig.json"]
+}
