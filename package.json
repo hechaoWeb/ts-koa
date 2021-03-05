@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "start": "nodemon",
-    "build": "rm -rf dist && tsc"
+    "build": "rm -rf dist && tsc && cp -r src/config dist/"
   },
   "dependencies": {
     "@types/joi": "^17.2.3",
