@@ -2,19 +2,19 @@ import * as Router from 'koa-router';
 import _ from 'lodash';
 import Joi from 'joi';
 
-import schema from './validator'
-import err from './error'
+import schema from './validator';
+import err from './error';
 
 export const router = new Router();
 
-export const pathBefore = (params:string):any => { 
+export const pathBefore = (params: string): any => { 
   return target => {
     target.path = params;
-  }
-}
-const decorate = (method:string) =>(path) => (target,property) => {
-  router[method](target.path + path, target[property])
-}
+  };
+};
+const decorate = (method: string) => (path) => (target, property) => {
+  router[method](target.path ? target.path + path : path, target[property]);
+};
 
 export function Valid(customSchema?: Joi.ObjectSchema | string) {
   return (target: Object, propertyKey: string) => {
@@ -37,6 +37,6 @@ export function Valid(customSchema?: Joi.ObjectSchema | string) {
   };
 }
 
-export const get = decorate('get')
-export const post = decorate('post')
+export const get = decorate('get');
+export const post = decorate('post');
 

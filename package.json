@@ -12,10 +12,12 @@
     "build": "rm -rf dist && tsc && cp -r src/config dist/"
   },
   "dependencies": {
+    "@types/ioredis": "^4.22.0",
     "@types/joi": "^17.2.3",
     "@types/lodash": "^4.14.168",
     "@types/nconf": "^0.10.0",
     "dotenv": "^8.2.0",
+    "ioredis": "^4.23.0",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
