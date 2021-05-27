@@ -30,7 +30,16 @@
 
 - npm run build
 
-### 生产环境启动
+### PM2启动
 
 - 生产环境使用 pm2 启动 可以达到负载均衡 执行：yarn pro 或 npm run pro （生产环境端口默认：8080）
 
+### DOCKER启动
+
+- docker stop ts-koa
+
+- docker rm ts-koa
+
+- docker build --pull -f "Dockerfile" -t ts-koa:latest "."
+
+- docker run  -p 3003:3003 --name ts-koa -d ts-koa:latest
